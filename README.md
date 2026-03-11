@@ -1,3 +1,51 @@
+## 🧠 Analisis Praktikum
+
+### 1. Dasar Class & Object
+Membangun cetak biru (`class Karakter`) yang memiliki atribut `nama`, `hp`, dan `attack_power`. Objek nyata (seperti `hero1` dan `hero2`) diinstansiasi dari kelas ini untuk menyimpan data yang berbeda-beda.
+
+### 2. Encapsulation (Enkapsulasi)
+Mengamankan data sensitif agar tidak bisa diubah sembarangan dari luar. Atribut HP dijadikan *private* (`__hp`). Perubahan nilai HP wajib melalui *setter* (`set_hp()`) yang sudah dilengkapi dengan validasi agar HP tidak menjadi negatif.
+
+### 3. Inheritance (Pewarisan)
+Mencegah penulisan kode berulang dengan mewariskan sifat kelas induk. Kelas `Warrior` dan `Mage` mewarisi atribut dasar dari kelas `Karakter`, namun bisa menambahkan atribut unik mereka sendiri (seperti `armor` untuk Warrior dan `mana` untuk Mage).
+
+### 4. Polymorphism (Polimorfisme)
+Menerapkan perilaku yang berbeda pada antarmuka yang sama. *Method* `serang()` dipanggil pada *looping* pasukan, namun menghasilkan *output* yang berbeda tergantung tipe prajuritnya (pedang untuk Warrior, bola api untuk Mage).
+
+### 5. Abstraction (Abstraksi)
+Membuat kerangka standar menggunakan modul `ABC`. Kelas `GameUnit` dijadikan *abstract class* sehingga tidak bisa diinisialisasi secara langsung. Kelas turunannya (seperti `Assassin`) *wajib* melakukan *override* pada *method* `serang()`.
+
+### 6. Simulasi Pertarungan
+Menggabungkan konsep OOP ke dalam sebuah simulasi sederhana menggunakan *looping* `while`. Objek menerima *damage*, HP berkurang melalui *method* internal, dan program otomatis berhenti ketika pengecekan `is_alive()` bernilai *False*.
+
+---
+
+## 💻 Hasil Output Program
+
+*(Tambahkan screenshot output terminal kamu di bawah ini untuk hasil yang lebih maksimal)*
+`![Screenshot Output Praktikum](link_gambar_kamu_di_sini.png)`
+
+**Log Output Teks:**
+
+Karakter: Arthur | HP: 500 | Power: 20
+Karakter: Lancelot | HP: 80 | Power: 25
+500
+HP Arthur tersisa: 70
+Gatotkaca punya armor 50, Kadita punya mana 100
+Menebas dengan pedang! (Physical Damage)
+Menembakkan bola api! (Magic Damage)
+Menusuk dari belakang! (Critical Damage)
+
+--- PERTARUNGAN DIMULAI ---
+Boss menyerang!
+Lancelot menerima 40 damage. Sisa HP: 60
+Boss menyerang!
+Lancelot menerima 40 damage. Sisa HP: 20
+Boss menyerang!
+Lancelot telah gugur!
+--- PERTARUNGAN SELESAI ---
+
+
 ### 👻 1. Abstraksi
 *Fokus pada apa yang dilakukan objek, bukan bagaimana cara melakukannya.*
 * **Penerapan:** Kelas `Produk` diatur sebagai kelas abstrak (menggunakan modul `abc`) yang memiliki *abstract method* `hitung_pajak()`.
